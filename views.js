@@ -19,3 +19,17 @@ function formatLocale() {
   d3.timeFormatDefaultLocale(pt_BR);
   d3.formatDefaultLocale(pt_BR);
 }
+
+//função para fazer o parse de data
+function formatTime(val) {
+  var ft = d3.timeFormat('%d/%m/%Y %H:%M:%S');
+  return ft(val);
+}
+
+//função para formatar um número com N casas decimais
+function formatNumber(val, dec = 1) {
+  return(val.toLocaleString('pt-BR', {
+    minimumFractionDigits: dec,
+    maximumFractionDigits: dec
+  }));
+}
