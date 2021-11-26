@@ -20,6 +20,10 @@ function formatLocale() {
   d3.formatDefaultLocale(pt_BR);
 }
 
+//função para fazer o parse de um string para uma data (formato dd/mm/yyyy hh:mm:ss)
+function parseTime(val) {
+  var pt = d3.timeParse('%d/%m/%Y %H:%M:%S');
+  return pt(val);
 //função para fazer o parse de data
 function formatTime(val) {
   var ft = d3.timeFormat('%d/%m/%Y %H:%M:%S');
