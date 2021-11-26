@@ -1,3 +1,4 @@
+// nova linha de comentário
 //função para definir configurações de tempo para o Brasil
 function formatLocale() {
   var pt_BR = {
